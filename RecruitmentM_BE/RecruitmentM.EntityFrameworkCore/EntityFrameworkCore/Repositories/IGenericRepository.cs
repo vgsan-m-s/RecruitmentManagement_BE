@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RecruitmentM.EntityFrameworkCore.EntityFrameworkCore.Repositories
+namespace RecruitmentM.EntityFrameworkCore
 {
     public interface IGenericRepository<TEntity>
         where TEntity : class

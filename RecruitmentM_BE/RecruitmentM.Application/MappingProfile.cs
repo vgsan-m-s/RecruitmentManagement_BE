@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using RecruitmentM.Core.Entity;
+using RecruitmentM.Core;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -11,9 +11,14 @@ namespace RecruitmentM.Application
         public MappingProfile()
         {
             // Add as many of these lines as you need to map your objects
-            CreateMap<ApplicantEntity, ApplicantDto>()
+            CreateMap<Applicant, ApplicantDto>()
                 .ReverseMap();
-            CreateMap<ApplicantEntity, ApplicantInput>()
+            CreateMap<Applicant, ApplicantInput>()
+                .ReverseMap();
+
+            CreateMap<Experience, ExperienceDto>()
+                .ReverseMap();
+            CreateMap<Experience, ExperienceInput>()
                 .ReverseMap();
         }
     }

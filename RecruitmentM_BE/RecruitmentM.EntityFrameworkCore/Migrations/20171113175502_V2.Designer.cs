@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage;
 using Microsoft.EntityFrameworkCore.Storage.Internal;
-using RecruitmentM.EntityFrameworkCore.EntityFrameworkCore;
+using RecruitmentM.EntityFrameworkCore;
 using System;
 
 namespace RecruitmentM.EntityFrameworkCore.Migrations
@@ -21,7 +21,7 @@ namespace RecruitmentM.EntityFrameworkCore.Migrations
                 .HasAnnotation("ProductVersion", "2.0.0-rtm-26452")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("RecruitmentM.Core.Entity.ApplicantEntity", b =>
+            modelBuilder.Entity("RecruitmentM.Core.Entity.Applicant", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();

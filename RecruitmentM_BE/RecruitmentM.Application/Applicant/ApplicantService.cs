@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using RecruitmentM.Application;
-using RecruitmentM.Core.Entity;
-using RecruitmentM.EntityFrameworkCore.EntityFrameworkCore.Repositories.Applicant;
+using RecruitmentM.Core;
+using RecruitmentM.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,7 +24,7 @@ namespace RecruitmentM.Application
 
         public List<ApplicantDto> GetApplicants()
         {
-            List<ApplicantEntity> listOfApplicant = _applicantrepository.GetAll().ToList();
+            List<Applicant> listOfApplicant = _applicantrepository.GetAll().ToList();
             var result = _mapper.Map<List<ApplicantDto>>(listOfApplicant);
 
             return result;
@@ -32,13 +32,13 @@ namespace RecruitmentM.Application
 
         public async Task CreateApplicant(ApplicantInput input)
         {
-            ApplicantEntity result = _mapper.Map<ApplicantEntity>(input);
+            Applicant result = _mapper.Map<Applicant>(input);
             await _applicantrepository.Create(result);
         }
 
         public async Task UpdateApplicant(ApplicantDto input)
         {
-            ApplicantEntity result = _mapper.Map<ApplicantEntity>(input);
+            Applicant result = _mapper.Map<Applicant>(input);
             result.ModifiedDate = DateTime.Now;
 
             await _applicantrepository.Update(input.Id, result);

@@ -10,10 +10,9 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Swashbuckle.AspNetCore.Swagger;
 using Microsoft.EntityFrameworkCore;
-using RecruitmentM.EntityFrameworkCore.EntityFrameworkCore;
+using RecruitmentM.EntityFrameworkCore;
 using AutoMapper;
 using RecruitmentM.Application;
-using RecruitmentM.EntityFrameworkCore.EntityFrameworkCore.Repositories.Applicant;
 
 namespace RecruitmentM.Web.Host
 {
@@ -36,6 +35,10 @@ namespace RecruitmentM.Web.Host
             
             services.AddScoped<IApplicantService, ApplicantService>();
             services.AddScoped<IApplicantRepository, ApplicantRepository>();
+
+            services.AddScoped<IExperienceService, ExperienceService>();
+
+            services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
 
             services.AddMvc();
 

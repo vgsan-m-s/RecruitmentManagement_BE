@@ -1,13 +1,13 @@
-﻿using RecruitmentM.Core.Entity;
+﻿using RecruitmentM.Core;
 using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RecruitmentM.EntityFrameworkCore.EntityFrameworkCore.Repositories.Applicant
+namespace RecruitmentM.EntityFrameworkCore
 {
-    public interface IApplicantRepository : IGenericRepository<ApplicantEntity>
+    public interface IApplicantRepository : IGenericRepository<Applicant>
     {
-        Task<ApplicantEntity> GetApplicants();
+        Task<Applicant> GetApplicants();
     }
 }

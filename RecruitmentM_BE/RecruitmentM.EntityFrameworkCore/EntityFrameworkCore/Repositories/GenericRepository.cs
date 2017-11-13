@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using RecruitmentM.Core;
 
-namespace RecruitmentM.EntityFrameworkCore.EntityFrameworkCore.Repositories
+namespace RecruitmentM.EntityFrameworkCore
 {
     public class GenericRepository<TEntity> : IGenericRepository<TEntity>
         where TEntity : class, IEntity

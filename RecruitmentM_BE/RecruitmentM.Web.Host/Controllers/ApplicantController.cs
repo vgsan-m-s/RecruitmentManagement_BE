@@ -9,6 +9,7 @@ using AutoMapper;
 
 namespace RecruitmentM.Web.Host.Controllers
 {
+    [Produces("application/json")]
     [Route("api/Applicant")]
     public class ApplicantController : Controller
     {
