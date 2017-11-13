@@ -11,7 +11,7 @@ namespace RecruitmentM.Application
         public MappingProfile()
         {
             // Add as many of these lines as you need to map your objects
-            CreateMap<Applicant, ApplicantDto>()
+            CreateMap<ApplicantEntity, ApplicantDto>()
                 .ReverseMap();
         }
     }

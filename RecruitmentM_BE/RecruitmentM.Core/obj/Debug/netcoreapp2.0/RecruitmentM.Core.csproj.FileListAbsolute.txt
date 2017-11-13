@@ -1,7 +1,6 @@
 C:\Users\pc-01\Source\Repos\RecruitmentM_BE\RecruitmentM_BE\RecruitmentM.Core\bin\Debug\netcoreapp2.0\RecruitmentM.Core.deps.json
 C:\Users\pc-01\Source\Repos\RecruitmentM_BE\RecruitmentM_BE\RecruitmentM.Core\bin\Debug\netcoreapp2.0\RecruitmentM.Core.dll
 C:\Users\pc-01\Source\Repos\RecruitmentM_BE\RecruitmentM_BE\RecruitmentM.Core\bin\Debug\netcoreapp2.0\RecruitmentM.Core.pdb
-C:\Users\pc-01\Source\Repos\RecruitmentM_BE\RecruitmentM_BE\RecruitmentM.Core\obj\Debug\netcoreapp2.0\RecruitmentM.Core.csprojResolveAssemblyReference.cache
 C:\Users\pc-01\Source\Repos\RecruitmentM_BE\RecruitmentM_BE\RecruitmentM.Core\obj\Debug\netcoreapp2.0\RecruitmentM.Core.csproj.CoreCompileInputs.cache
 C:\Users\pc-01\Source\Repos\RecruitmentM_BE\RecruitmentM_BE\RecruitmentM.Core\obj\Debug\netcoreapp2.0\RecruitmentM.Core.AssemblyInfoInputs.cache
 C:\Users\pc-01\Source\Repos\RecruitmentM_BE\RecruitmentM_BE\RecruitmentM.Core\obj\Debug\netcoreapp2.0\RecruitmentM.Core.AssemblyInfo.cs

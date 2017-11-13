@@ -23,7 +23,15 @@ namespace RecruitmentM.Web.Host.Controllers
             _applicantService = applicantService;
         }
 
-        public async Task<List<ApplicantDto>> GetApplicants()
+        [HttpGet("GetApplicants")]
+        public List<ApplicantDto> GetApplicants()
+        {
+            List<ApplicantDto> applicantList = _applicantService.GetApplicants();
+            return applicantList;
+        }
+
+        [HttpGet("GetApplicantsTest")]
+        public List<ApplicantDto> GetApplicantsTest()
         {
             List<ApplicantDto> applicantList = _applicantService.GetApplicants();
             return applicantList;

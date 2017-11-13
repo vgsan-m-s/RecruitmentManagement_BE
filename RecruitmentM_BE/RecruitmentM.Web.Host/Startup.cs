@@ -12,6 +12,8 @@ using Swashbuckle.AspNetCore.Swagger;
 using Microsoft.EntityFrameworkCore;
 using RecruitmentM.EntityFrameworkCore.EntityFrameworkCore;
 using AutoMapper;
+using RecruitmentM.Application;
+using RecruitmentM.EntityFrameworkCore.EntityFrameworkCore.Repositories.Applicant;
 
 namespace RecruitmentM.Web.Host
 {
@@ -31,6 +33,9 @@ namespace RecruitmentM.Web.Host
 
             services.AddDbContext<RecruitmentMDbContext>(options =>
             options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            
+            services.AddScoped<IApplicantService, ApplicantService>();
+            services.AddScoped<IApplicantRepository, ApplicantRepository>();
 
             services.AddMvc();
 

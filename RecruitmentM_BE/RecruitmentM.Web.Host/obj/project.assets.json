@@ -5134,7 +5134,8 @@
         "framework": ".NETCoreApp,Version=v2.0",
         "dependencies": {
           "AutoMapper": "6.2.0",
-          "RecruitmentM.Core": "1.0.0"
+          "RecruitmentM.Core": "1.0.0",
+          "RecruitmentM.EntityFrameworkCore": "1.0.0"
         },
         "compile": {
           "bin/placeholder/RecruitmentM.Application.dll": {}
@@ -5157,6 +5158,9 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.0",
         "dependencies": {
+          "Microsoft.EntityFrameworkCore.SqlServer": "2.0.0",
+          "Microsoft.EntityFrameworkCore.Tools": "2.0.0",
+          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "2.0.0",
           "RecruitmentM.Core": "1.0.0"
         },
         "compile": {

@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\RecruitmentM.Core\RecruitmentM.Core.csproj" />
+    <ProjectReference Include="..\RecruitmentM.EntityFrameworkCore\RecruitmentM.EntityFrameworkCore.csproj" />
   </ItemGroup>
 
 </Project>

@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27004.2005
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecruitmentM.Web.Host", "RecruitmentM.Web.Host\RecruitmentM.Web.Host.csproj", "{EF656F43-895C-4A7B-BC69-19753F93C89F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RecruitmentM.Web.Host", "RecruitmentM.Web.Host\RecruitmentM.Web.Host.csproj", "{EF656F43-895C-4A7B-BC69-19753F93C89F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecruitmentM.Core", "RecruitmentM.Core\RecruitmentM.Core.csproj", "{29BA2D01-E7A4-423F-AE41-B59E096EEACA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RecruitmentM.Core", "RecruitmentM.Core\RecruitmentM.Core.csproj", "{29BA2D01-E7A4-423F-AE41-B59E096EEACA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecruitmentM.Application", "RecruitmentM.Application\RecruitmentM.Application.csproj", "{FCD963FB-97CB-46C2-ABC7-ACA7B65C6AED}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RecruitmentM.Application", "RecruitmentM.Application\RecruitmentM.Application.csproj", "{FCD963FB-97CB-46C2-ABC7-ACA7B65C6AED}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecruitmentM.EntityFrameworkCore", "RecruitmentM.EntityFrameworkCore\RecruitmentM.EntityFrameworkCore.csproj", "{1BAFAECD-F09F-4DD7-A8ED-9DCACE60A526}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RecruitmentM.EntityFrameworkCore", "RecruitmentM.EntityFrameworkCore\RecruitmentM.EntityFrameworkCore.csproj", "{1BAFAECD-F09F-4DD7-A8ED-9DCACE60A526}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

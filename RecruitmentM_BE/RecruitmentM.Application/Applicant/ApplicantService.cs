@@ -1,8 +1,10 @@
 ﻿using AutoMapper;
 using RecruitmentM.Application;
 using RecruitmentM.Core.Entity;
+using RecruitmentM.EntityFrameworkCore.EntityFrameworkCore.Repositories.Applicant;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -11,19 +13,18 @@ namespace RecruitmentM.Application
     public class ApplicantService : IApplicantService
     {
         private readonly IMapper _mapper;
-        IRepository<Applicant> _applicantrepository;
+        IApplicantRepository _applicantrepository;
 
-        public ApplicantService(IMapper _mapper,
-            IRepository<Applicant> applicantrepository)
+        public ApplicantService(IMapper mapper,
+            IApplicantRepository applicantrepository)
         {
-            _mapper = _mapper;
+            _mapper = mapper;
             _applicantrepository = applicantrepository;
         }
 
-        public async Task<List<ApplicantDto>> GetApplicants()
+        public List<ApplicantDto> GetApplicants()
         {
-            //_applicantrepository.Get
-            List<Applicant> listOfApplicant = new List<Applicant>();
+            List<ApplicantEntity> listOfApplicant = _applicantrepository.GetAll().ToList();
             var result = _mapper.Map<List<ApplicantDto>>(listOfApplicant);
 
             return result;

@@ -14,3 +14,4 @@ C:\Users\pc-01\Source\Repos\RecruitmentM_BE\RecruitmentM_BE\RecruitmentM.Web.Hos
 C:\Users\pc-01\Source\Repos\RecruitmentM_BE\RecruitmentM_BE\RecruitmentM.Web.Host\bin\Debug\netcoreapp2.0\RecruitmentM.EntityFrameworkCore.pdb
 C:\Users\pc-01\Source\Repos\RecruitmentM_BE\RecruitmentM_BE\RecruitmentM.Web.Host\bin\Debug\netcoreapp2.0\RecruitmentM.Core.pdb
 C:\Users\pc-01\Source\Repos\RecruitmentM_BE\RecruitmentM_BE\RecruitmentM.Web.Host\bin\Debug\netcoreapp2.0\RecruitmentM.Application.dll
+C:\Users\pc-01\Source\Repos\RecruitmentM_BE\RecruitmentM_BE\RecruitmentM.Web.Host\bin\Debug\netcoreapp2.0\RecruitmentM.Application.pdb

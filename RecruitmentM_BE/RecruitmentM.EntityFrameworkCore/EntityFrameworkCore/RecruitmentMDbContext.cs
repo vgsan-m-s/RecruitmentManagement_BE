@@ -10,7 +10,7 @@ namespace RecruitmentM.EntityFrameworkCore.EntityFrameworkCore
     {
         /* Define an IDbSet for each entity of the application */
 
-        public virtual DbSet<Applicant> Applicant { get; set; }
+        public virtual DbSet<ApplicantEntity> Applicant { get; set; }
 
         public RecruitmentMDbContext(DbContextOptions<RecruitmentMDbContext> options)
             : base(options)
