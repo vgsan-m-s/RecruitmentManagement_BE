@@ -8,5 +8,7 @@ namespace RecruitmentM.Application
     public interface IApplicantService
     {
         List<ApplicantDto> GetApplicants();
+        Task CreateApplicant(ApplicantInput input);
+        Task UpdateApplicant(ApplicantDto input);
     }
 }

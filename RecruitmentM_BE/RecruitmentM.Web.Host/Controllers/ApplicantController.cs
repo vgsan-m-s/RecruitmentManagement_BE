@@ -9,7 +9,6 @@ using AutoMapper;
 
 namespace RecruitmentM.Web.Host.Controllers
 {
-    [Produces("application/json")]
     [Route("api/Applicant")]
     public class ApplicantController : Controller
     {
@@ -30,11 +29,16 @@ namespace RecruitmentM.Web.Host.Controllers
             return applicantList;
         }
 
-        [HttpGet("GetApplicantsTest")]
-        public List<ApplicantDto> GetApplicantsTest()
+        [HttpPost("CreateApplicant")]
+        public async Task CreateApplicant(ApplicantInput input)
         {
-            List<ApplicantDto> applicantList = _applicantService.GetApplicants();
-            return applicantList;
+            await _applicantService.CreateApplicant(input);
+        }
+
+        [HttpPost("UpdateApplicant")]
+        public async Task UpdateApplicant(ApplicantDto input)
+        {
+            await _applicantService.UpdateApplicant(input);
         }
     }
 }

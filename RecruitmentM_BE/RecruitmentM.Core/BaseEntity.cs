@@ -9,6 +9,13 @@ namespace RecruitmentM.Core
         public int Id { get; set; }
         public DateTime AddedDate { get; set; }
         public DateTime ModifiedDate { get; set; }
-        public bool IsSoftDelete { get; set; }
+        public bool IsActive { get; set; }
+
+        public BaseEntity()
+        {
+            AddedDate = DateTime.Now;
+            ModifiedDate = DateTime.Now;
+            IsActive = true;
+        }
     }
 }

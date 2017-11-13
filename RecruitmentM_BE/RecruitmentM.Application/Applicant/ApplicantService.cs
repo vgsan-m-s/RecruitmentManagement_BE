@@ -29,5 +29,19 @@ namespace RecruitmentM.Application
 
             return result;
         }
+
+        public async Task CreateApplicant(ApplicantInput input)
+        {
+            ApplicantEntity result = _mapper.Map<ApplicantEntity>(input);
+            await _applicantrepository.Create(result);
+        }
+
+        public async Task UpdateApplicant(ApplicantDto input)
+        {
+            ApplicantEntity result = _mapper.Map<ApplicantEntity>(input);
+            result.ModifiedDate = DateTime.Now;
+
+            await _applicantrepository.Update(input.Id, result);
+        }
     }
 }

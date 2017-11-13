@@ -11,9 +11,10 @@ using System;
 namespace RecruitmentM.EntityFrameworkCore.Migrations
 {
     [DbContext(typeof(RecruitmentMDbContext))]
-    partial class RecruitmentMDbContextModelSnapshot : ModelSnapshot
+    [Migration("20171113175502_V2")]
+    partial class V2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
