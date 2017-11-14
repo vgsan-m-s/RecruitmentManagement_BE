@@ -13,6 +13,9 @@ namespace RecruitmentM.EntityFrameworkCore
         public virtual DbSet<Applicant> Applicant { get; set; }
         public virtual DbSet<Experience> Experience { get; set; }
 
+        public virtual DbSet<Workflow> Workflow { get; set; }
+        public virtual DbSet<ApplicantWorkflow> ApplicantWorkflow { get; set; }
+
         public RecruitmentMDbContext(DbContextOptions<RecruitmentMDbContext> options)
             : base(options)
         {

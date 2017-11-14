@@ -13,6 +13,7 @@ using Microsoft.EntityFrameworkCore;
 using RecruitmentM.EntityFrameworkCore;
 using AutoMapper;
 using RecruitmentM.Application;
+using Microsoft.AspNetCore.Cors.Infrastructure;
 
 namespace RecruitmentM.Web.Host
 {
@@ -32,7 +33,7 @@ namespace RecruitmentM.Web.Host
 
             services.AddDbContext<RecruitmentMDbContext>(options =>
             options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
-            
+
             services.AddScoped<IApplicantService, ApplicantService>();
             services.AddScoped<IApplicantRepository, ApplicantRepository>();
 
@@ -41,6 +42,21 @@ namespace RecruitmentM.Web.Host
             services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
 
             services.AddMvc();
+
+            // ********************
+            // Setup CORS
+            // ********************
+            var corsBuilder = new CorsPolicyBuilder();
+            corsBuilder.AllowAnyHeader();
+            corsBuilder.AllowAnyMethod();
+            corsBuilder.AllowAnyOrigin(); // For anyone access.
+            //corsBuilder.WithOrigins("http://localhost:56573"); // for a specific url. Don't add a forward slash on the end!
+            corsBuilder.AllowCredentials();
+
+            services.AddCors(options =>
+            {
+                options.AddPolicy("SiteCorsPolicy", corsBuilder.Build());
+            });
 
             // Register the Swagger generator, defining one or more Swagger documents
             services.AddSwaggerGen(c =>
@@ -67,6 +83,11 @@ namespace RecruitmentM.Web.Host
             });
 
             app.UseMvc();
+
+            // ********************
+            // USE CORS - might not be required.
+            // ********************
+            app.UseCors("SiteCorsPolicy");
         }
     }
 }

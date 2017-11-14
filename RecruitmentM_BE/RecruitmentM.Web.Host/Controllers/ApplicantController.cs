@@ -6,9 +6,11 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using RecruitmentM.Application;
 using AutoMapper;
+using Microsoft.AspNetCore.Cors;
 
 namespace RecruitmentM.Web.Host.Controllers
 {
+    [EnableCors("SiteCorsPolicy")]
     [Produces("application/json")]
     [Route("api/Applicant")]
     public class ApplicantController : Controller

@@ -6,3 +6,4 @@ C:\Users\pc-01\Source\Repos\RecruitmentM_BE\RecruitmentM_BE\RecruitmentM.Core\ob
 C:\Users\pc-01\Source\Repos\RecruitmentM_BE\RecruitmentM_BE\RecruitmentM.Core\obj\Debug\netcoreapp2.0\RecruitmentM.Core.AssemblyInfo.cs
 C:\Users\pc-01\Source\Repos\RecruitmentM_BE\RecruitmentM_BE\RecruitmentM.Core\obj\Debug\netcoreapp2.0\RecruitmentM.Core.dll
 C:\Users\pc-01\Source\Repos\RecruitmentM_BE\RecruitmentM_BE\RecruitmentM.Core\obj\Debug\netcoreapp2.0\RecruitmentM.Core.pdb
+C:\Users\pc-01\Source\Repos\RecruitmentM_BE\RecruitmentM_BE\RecruitmentM.Core\obj\Debug\netcoreapp2.0\RecruitmentM.Core.csprojResolveAssemblyReference.cache

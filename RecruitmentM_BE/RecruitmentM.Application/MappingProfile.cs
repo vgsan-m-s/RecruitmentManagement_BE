@@ -20,6 +20,16 @@ namespace RecruitmentM.Application
                 .ReverseMap();
             CreateMap<Experience, ExperienceInput>()
                 .ReverseMap();
+
+            CreateMap<Workflow, WorkflowDto>()
+                .ReverseMap();
+            CreateMap<Workflow, WorkflowInput>()
+                .ReverseMap();
+
+            CreateMap<ApplicantWorkflow, ApplicantWorkflowDto>()
+                .ReverseMap();
+            CreateMap<ApplicantWorkflow, ApplicantWorkflowInput>()
+                .ReverseMap();
         }
     }
 }
