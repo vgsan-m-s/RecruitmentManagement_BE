@@ -25,6 +25,13 @@ namespace RecruitmentM.Web.Host.Controllers
             _workflowService = workflowService;
         }
 
+        [HttpGet("GetWorkflow")]
+        public async Task<WorkflowDto> GetWorkflow(int id)
+        {
+            WorkflowDto workflow = await _workflowService.GetWorkflow(id);
+            return workflow;
+        }
+
         [HttpGet("GetWorkflows")]
         public List<WorkflowDto> GetWorkflows()
         {
@@ -32,7 +39,7 @@ namespace RecruitmentM.Web.Host.Controllers
             return workflowList;
         }
 
-        [HttpPost("CreateWorkflow")]
+        [HttpPut("CreateWorkflow")]
         public async Task CreateWorkflow(WorkflowInput input)
         {
             await _workflowService.CreateWorkflow(input);
@@ -42,6 +49,12 @@ namespace RecruitmentM.Web.Host.Controllers
         public async Task UpdateWorkflow(WorkflowDto input)
         {
             await _workflowService.UpdateWorkflow(input);
+        }
+
+        [HttpDelete("DeleteWorkflow")]
+        public async Task DeleteWorkflow(int id)
+        {
+            await _workflowService.DeleteWorkflow(id);
         }
     }
 }

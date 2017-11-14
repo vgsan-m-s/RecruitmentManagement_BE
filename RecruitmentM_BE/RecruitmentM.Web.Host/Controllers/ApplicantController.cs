@@ -25,6 +25,13 @@ namespace RecruitmentM.Web.Host.Controllers
             _applicantService = applicantService;
         }
 
+        [HttpGet("GetApplicant")]
+        public async Task<ApplicantDto> GetApplicant(int id)
+        {
+            ApplicantDto applicant = await _applicantService.GetApplicant(id);
+            return applicant;
+        }
+
         [HttpGet("GetApplicants")]
         public List<ApplicantDto> GetApplicants()
         {
@@ -32,7 +39,7 @@ namespace RecruitmentM.Web.Host.Controllers
             return applicantList;
         }
 
-        [HttpPost("CreateApplicant")]
+        [HttpPut("CreateApplicant")]
         public async Task CreateApplicant(ApplicantInput input)
         {
             await _applicantService.CreateApplicant(input);
@@ -42,6 +49,12 @@ namespace RecruitmentM.Web.Host.Controllers
         public async Task UpdateApplicant(ApplicantDto input)
         {
             await _applicantService.UpdateApplicant(input);
+        }
+
+        [HttpDelete("DeleteApplicant")]
+        public async Task DeleteApplicant(int id)
+        {
+            await _applicantService.DeleteApplicant(id);
         }
     }
 }

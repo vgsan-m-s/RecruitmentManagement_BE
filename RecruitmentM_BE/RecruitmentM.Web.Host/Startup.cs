@@ -38,6 +38,8 @@ namespace RecruitmentM.Web.Host
             services.AddScoped<IApplicantRepository, ApplicantRepository>();
 
             services.AddScoped<IExperienceService, ExperienceService>();
+            services.AddScoped<IWorkflowService, WorkflowService>();
+            services.AddScoped<IApplicantWorkflowService, ApplicantWorkflowService>();
 
             services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
 

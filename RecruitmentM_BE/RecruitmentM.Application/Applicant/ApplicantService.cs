@@ -43,5 +43,17 @@ namespace RecruitmentM.Application
 
             await _applicantrepository.Update(input.Id, result);
         }
+
+        public async Task<ApplicantDto> GetApplicant(int id)
+        {
+            Applicant applicant = await _applicantrepository.GetById(id);
+            var result = _mapper.Map<ApplicantDto>(applicant);
+            return result;
+        }
+
+        public async Task DeleteApplicant(int id)
+        {
+            await _applicantrepository.Delete(id);
+        }
     }
 }

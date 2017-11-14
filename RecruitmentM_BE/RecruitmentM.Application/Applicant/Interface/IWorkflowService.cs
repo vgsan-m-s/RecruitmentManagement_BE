@@ -7,8 +7,10 @@ namespace RecruitmentM.Application
 {
     public interface IWorkflowService
     {
+        Task<WorkflowDto> GetWorkflow(int id);
         List<WorkflowDto> GetWorkflows();
         Task CreateWorkflow(WorkflowInput input);
         Task UpdateWorkflow(WorkflowDto input);
+        Task DeleteWorkflow(int id);
     }
 }

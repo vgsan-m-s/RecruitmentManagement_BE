@@ -21,6 +21,13 @@ namespace RecruitmentM.Application
             _workflowRepository = workflowRepository;
         }
 
+        public async Task<WorkflowDto> GetWorkflow(int id)
+        {
+            Workflow workflow = await _workflowRepository.GetById(id);
+            var result = _mapper.Map<WorkflowDto>(workflow);
+            return result;
+        }
+
         public async Task CreateWorkflow(WorkflowInput input)
         {
             Workflow result = _mapper.Map<Workflow>(input);
@@ -41,6 +48,10 @@ namespace RecruitmentM.Application
             result.ModifiedDate = DateTime.Now;
 
             await _workflowRepository.Update(input.Id, result);
+        }
+        public async Task DeleteWorkflow(int id)
+        {
+            await _workflowRepository.Delete(id);
         }
     }
 }
