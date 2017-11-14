@@ -46,7 +46,7 @@ namespace RecruitmentM.Application
 
         public async Task<ApplicantDto> GetApplicant(int id)
         {
-            Applicant applicant = await _applicantrepository.GetById(id);
+            Applicant applicant = await _applicantrepository.GetByIdAsync(id);
             var result = _mapper.Map<ApplicantDto>(applicant);
             return result;
         }

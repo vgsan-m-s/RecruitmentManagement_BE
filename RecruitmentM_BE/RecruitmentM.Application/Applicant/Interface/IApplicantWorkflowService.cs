@@ -7,7 +7,8 @@ namespace RecruitmentM.Application
 {
     public interface IApplicantWorkflowService
     {
-        List<ApplicantWorkflowDto> GetApplicantWorkflows();
+        List<ApplicantWorkflowDto> GetApplicantWorkflows(string ApplicantMailAddress);
+        List<ApplicantWorkflowDto> GetApplicantCurrentState();
         Task CreateApplicantWorkflow(ApplicantWorkflowInput input);
     }
 }

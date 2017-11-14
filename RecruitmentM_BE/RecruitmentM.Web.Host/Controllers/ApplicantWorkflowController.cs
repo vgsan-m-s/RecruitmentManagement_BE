@@ -26,9 +26,16 @@ namespace RecruitmentM.Web.Host.Controllers
         }
 
         [HttpGet("GetApplicantWorkflows")]
-        public List<ApplicantWorkflowDto> GetApplicantWorkflows()
+        public List<ApplicantWorkflowDto> GetApplicantWorkflows(string ApplicantMailAddress)
         {
-            List<ApplicantWorkflowDto> applicantWorkflowList = _applicantWorkflowService.GetApplicantWorkflows();
+            List<ApplicantWorkflowDto> applicantWorkflowList = _applicantWorkflowService.GetApplicantWorkflows(ApplicantMailAddress);
+            return applicantWorkflowList;
+        }
+
+        [HttpGet("GetApplicantCurrentState")]
+        public List<ApplicantWorkflowDto> GetApplicantCurrentState()
+        {
+            List<ApplicantWorkflowDto> applicantWorkflowList = _applicantWorkflowService.GetApplicantCurrentState();
             return applicantWorkflowList;
         }
 

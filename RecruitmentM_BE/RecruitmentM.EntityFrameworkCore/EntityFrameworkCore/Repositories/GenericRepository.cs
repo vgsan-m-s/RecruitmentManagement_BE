@@ -21,11 +21,18 @@ namespace RecruitmentM.EntityFrameworkCore
             return _dbContext.Set<TEntity>().AsNoTracking();
         }
 
-        public async Task<TEntity> GetById(int id)
+        public async Task<TEntity> GetByIdAsync(int id)
         {
             return await _dbContext.Set<TEntity>()
                 .AsNoTracking()
                 .FirstOrDefaultAsync(e => e.Id == id);
+        }
+
+        public TEntity GetById(int id)
+        {
+            return _dbContext.Set<TEntity>()
+                .AsNoTracking()
+                .FirstOrDefault(e => e.Id == id);
         }
 
         public async Task Create(TEntity entity)

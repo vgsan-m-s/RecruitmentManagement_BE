@@ -23,7 +23,7 @@ namespace RecruitmentM.Application
 
         public async Task<WorkflowDto> GetWorkflow(int id)
         {
-            Workflow workflow = await _workflowRepository.GetById(id);
+            Workflow workflow = await _workflowRepository.GetByIdAsync(id);
             var result = _mapper.Map<WorkflowDto>(workflow);
             return result;
         }
